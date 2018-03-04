@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript">
+window.onload = function(){
+//获取canvas元素
+var canvas = document.getElementById("canvas");
+//获取上下文
+var context = canvas.getContext("2d");
+
+//线的起始点和终止点
+context.moveTo(50,50);
+context.lineTo(100,100);
+
+//设置线的长度和线条颜色
+context.lineWidth = 5;
+context.strokeStyle = "red";
+context.stroke();
+
+    //为将要画的图像设置颜色  
+    context.fillStyle = "blue"; 
+    //图像的边框线颜色  
+    context.strokeStyle = "black"; 
+    context.lineWidth=1;
+     //图像的坐标以及宽高   
+    context.fillRect(150,50,100,100);  
+    context.strokeRect(150,50,100,100)
+}
+</script>
+</body>
+</html>
